@@ -7,8 +7,13 @@
   <title>Planets</title>
 </head>
 <body>
+  <ul>
+    <li><a href="./systems.html">Browse, Add, Remove Solar Systems</a></li>
+    <li><a href="./stars.html">Browse, Add, Remove Stars</a></li>
+    <li><a href="./planets.html">Browse, Add, Remove planets</a></li>
+    <li><a href="./moons.html">Browse, Add, Remove moons</a></li>
+  </ul>
   <h1>Add a New Planet</h1>
-  <h2>"Insert" for planets table</h2>
   <form id ="addForm" class="addForm">
     <input id="inputName" type="text" name="name">
     <input id="inputPosition" type="number" name="position">
@@ -20,7 +25,11 @@
 
   <h2>"Select" for planets table</h2>
   <ul>
-    <li>Planet 1 <button>Delete Planet</button></li>
+    <li>Planet 1 <button>Delete Planet</button>
+      <ul>
+        <li>Moon 1 <button>Delete Moon (Delete for M:M relationship)</button></li>
+      </ul>
+    </li>
     <li>Planet 2 <button>Delete Planet</button></li>
     <li>Planet 3 <button>Delete Planet</button></li>
     <li>Planet 4 <button>Delete Planet</button></li>
