@@ -2,60 +2,15 @@
   <html lang='en'>
     <head>
       <meta name="viewport" content="width=device-width">
-      <title>Document</title>
+      <title>Solar System Simulator</title>
       <link rel="stylesheet" href="style.css">
     </head>
     <body>
-      <!-- Add row form-->
-      <!-- Name, reps, weight, lbs, date, submit button -->
-      <h1>Add a New Planet</h1>
-        <form id ="addForm" class="addForm">
-          <input id="inputName" type="text" name="name">
-          <input id="inputPosition" type="number" name="position">
-		  <input id="inputRelativeSize" type="text" name="relativeSize">
-          <input id="inputColor" type="color" name="color">
-	      <input id="inputSolarSystem" type="number" name="solarSystem">
-          <input id="addButton" type="submit" name="submitButton" value="submit">
-        </form>
-
-      <!-- Table of data -->
-      <!-- Rows with id, name, resp, weight, lbs, date, update button (put), delete button (delete) -->
-      <h1>Workouts Table</h1>
-      <table id='workoutTable'></table>
-
-      <div class="popup" id="popup">
-        <div class="popupHeader">
-          <div class="title">Update the Row</div>
-          <button class="closeButton" type="button" name="button">&times;</button>
-        </div>
-        <div class="popupBody">
-          <form id ="updateForm" class="updateForm">
-            <label for="updateName">Name: </label>
-            <input id="updateName" type="text" name="name">
-            <br>
-            <label for="updateReps">Reps: </label>
-            <input id="updateReps" type="number" name="reps">
-            <br>
-            <label for="updateWeight">Weight: </label>
-            <input id="updateWeight" type="number" name="weight">
-            <br>
-            <label id="updateUnits" for="updatelbs">lbs</label>
-            <input type="radio" id='updatelbs' name="updateUnits" value="1">
-            <br>
-            <label id="updateUnits" for="updatekg">Kg</label>
-            <input type="radio" id = "updatekg" name="updateUnits" value="0">
-            <br>
-            <label for="updateDate">Date: </label>
-            <input id="updateDate" type="date" name="date" value="">
-            <br>
-            <input id="updateFormButton" type="submit" name="submitButton" value="Change">
-          </form>
-
-        </div>
-      </div>
-
-      <div class="" id="overlay"></div>
-
+      <ul>
+        <li><a href="./systems.html">Browse, Add, Remove Solar Systems</a></li>
+        <li><a href="./planets.html">Browse, Add, Remove Solar planets</a></li>
+        <li><a href="./moons.html">Browse, Add, Remove Solar moons</a></li>
+      </ul>
       <script src='script.js'></script>
     </body>
   </html>
