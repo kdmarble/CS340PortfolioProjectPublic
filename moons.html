@@ -4,37 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>Moons</title>
 </head>
 <body>
-  <ul>
-    <li><a href="./systems.html">Browse, Add, Remove Solar Systems</a></li>
-    <li><a href="./stars.html">Browse, Add, Remove Stars</a></li>
-    <li><a href="./planets.html">Browse, Add, Remove planets</a></li>
-    <li><a href="./moons.html">Browse, Add, Remove moons</a></li>
-  </ul>
-  <h1>Add a New Moon</h1>
-  <form id ="addForm" class="addForm">
-    <input id="inputName" type="text" name="name">
-    <input id="inputPosition" type="number" name="position">
-    <input id="inputRelativeSize" type="text" name="relativeSize">
-    <input id="inputColor" type="color" name="color">
-    <input id="inputSolarSystem" type="number" name="solarSystem">
-    <input id="addButton" type="submit" name="submitButton" value="submit">
-  </form>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">Solar System Simulator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="./systems.html">Solar Systems <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="./stars.html">Stars</a>
+            <a class="nav-item nav-link" href="./planets.html">Planets</a>
+            <a class="nav-item nav-link" href="./moons.html">Moons</a>
+          </div>
+        </div>
+      </nav>
 
-  <h1>Search for a Moon by name</h1>
-  <form id ="searchForm" class="searchForm">
-    <input id="inputName" type="text" name="name">
-    <input id="searchButton" type="submit" name="submitButton" value="submit">
-  </form>
+      <div class="container">
+      <h1>Add a New Moon</h1>
+      <form>
+        <div class="form-group">
+          <label for="inputName">Name</label>
+          <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter name">
+        </div>
+  
+        <div class="form-group">
+          <label for="inputPosition">Position</label>
+          <input type="number" class="form-control" id="inputPosition" placeholder="Relative Position in System" min="1" max="5">
+        </div>
+  
+        <div class="form-group">
+          <label for="inputRelativeSize">Size</label>
+          <input type="number" class="form-control" id="inputRelativeSize" aria-describedby="nameHelp" placeholder="Relative Size" min="1" max="5">
+        </div>
+  
+        <div class="form-group">
+          <label for="inputColor">Color</label>
+          <input type="color" class="form-control" id="inputColor" aria-describedby="nameHelp" placeholder="Enter Color">
+        </div>
+  
+        <div class="form-group">
+          <label for="inputSolarSystem">Parent System</label>
+          <input type="number" class="form-control" id="inputSolarSystem" aria-describedby="nameHelp" placeholder="Enter Parent Solar System">
+        </div>
 
-  <h2>"Select" for Moons table</h2>
-  <ul>
-    <li>Moon 1 <button>Delete Moon</button></li>
-    <li>Moon 2 <button>Delete Moon</button></li>
-    <li>Moon 3 <button>Delete Moon</button></li>
-    <li>Moon 4 <button>Delete Moon</button></li>
-  </ul>
+        <div class="form-group">
+          <label for="inputParentPlanet">Select Parent Planet (Control-Click for multiple)</label>
+          <select multiple class="form-control" id="inputParentPlanet">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+  
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+  <div class="container">
+    <h1>Search for a Moon by name</h1>
+    <form id ="searchForm" class="searchForm">
+      <div class="form-group">
+          <label for="inputName">Name</label>
+          <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter name">
+        </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <h2>"Select" for Moons table</h2>
+    <ul>
+      <li>Moon 1 <button>Delete Moon</button></li>
+      <li>Moon 2 <button>Delete Moon</button></li>
+      <li>Moon 3 <button>Delete Moon</button></li>
+      <li>Moon 4 <button>Delete Moon</button></li>
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
