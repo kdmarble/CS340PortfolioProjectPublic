@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Systems</title>
+</head>
+<body>
+  <ul>
+    <li><a href="./systems.html">Browse, Add, Remove Solar Systems</a></li>
+    <li><a href="./stars.html">Browse, Add, Remove Stars</a></li>
+    <li><a href="./planets.html">Browse, Add, Remove planets</a></li>
+    <li><a href="./moons.html">Browse, Add, Remove moons</a></li>
+  </ul>
+  <h1>Add a New System</h1>
+  <form id ="addForm" class="addForm">
+    <input id="inputName" type="text" name="name">
+    <input id="inputPosition" type="number" name="position">
+    <input id="inputRelativeSize" type="text" name="relativeSize">
+    <input id="inputColor" type="color" name="color">
+    <input id="inputSolarSystem" type="number" name="solarSystem">
+    <input id="addButton" type="submit" name="submitButton" value="submit">
+  </form>
+
+  <h2>"Select" for Systems table</h2>
+  <ul>
+    <li>System 1 <button>Delete System</button>
+      <ul>
+        <li>Star 1
+          <ul>
+            <li>Planet 1
+              <ul>
+                <li>Moon 1</li>
+                <li>Moon 2</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
