@@ -25,40 +25,40 @@
 
       <div class="container">
       <h1>Add a New Moon</h1>
-      <form>
+      <form id="addMoon">
         <div class="form-group">
           <label for="inputName">Name</label>
-          <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter name">
+          <input required type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter name">
         </div>
   
         <div class="form-group">
           <label for="inputPosition">Position</label>
-          <input type="number" class="form-control" id="inputPosition" placeholder="Relative Position in System" min="1" max="5">
+          <input required type="number" class="form-control" id="inputPosition" placeholder="Relative Position in System" min="1" max="5">
         </div>
   
         <div class="form-group">
-          <label for="inputRelativeSize">Size</label>
-          <input type="number" class="form-control" id="inputRelativeSize" aria-describedby="nameHelp" placeholder="Relative Size" min="1" max="5">
+          <label for="inputSize">Size</label>
+          <input required type="number" class="form-control" id="inputSize" aria-describedby="nameHelp" placeholder="Relative Size" min="1" max="5">
         </div>
   
         <div class="form-group">
           <label for="inputColor">Color</label>
-          <input type="color" class="form-control" id="inputColor" aria-describedby="nameHelp" placeholder="Enter Color">
+          <input required type="color" class="form-control" id="inputColor" aria-describedby="nameHelp" placeholder="Enter Color">
         </div>
   
         <div class="form-group">
           <label for="inputSolarSystem">Parent System</label>
-          <input type="number" class="form-control" id="inputSolarSystem" aria-describedby="nameHelp" placeholder="Enter Parent Solar System">
+          <input required type="text" class="form-control" id="inputSolarSystem" aria-describedby="nameHelp" placeholder="Enter Parent Solar System">
         </div>
 
         <div class="form-group">
           <label for="inputParentPlanet">Select Parent Planet (Control-Click for multiple)</label>
           <select multiple class="form-control" id="inputParentPlanet">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select>
         </div>
   
@@ -71,7 +71,7 @@
     <form id ="searchForm" class="searchForm">
       <div class="form-group">
           <label for="inputName">Name</label>
-          <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter name">
+          <input required type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter name">
         </div>
           <button type="submit" class="btn btn-primary">Submit</button>
     </form>
@@ -79,16 +79,17 @@
 
   <div class="container">
     <h2>"Select" for Moons table</h2>
-    <ul>
-      <li>Moon 1 <button>Delete Moon</button></li>
-      <li>Moon 2 <button>Delete Moon</button></li>
-      <li>Moon 3 <button>Delete Moon</button></li>
-      <li>Moon 4 <button>Delete Moon</button></li>
+    <ul id="moonsList">
+      <li>Moon 1 <button class="btn btn-danger">Delete Moon</button></li>
+      <li>Moon 2 <button class="btn btn-danger">Delete Moon</button></li>
+      <li>Moon 3 <button class="btn btn-danger">Delete Moon</button></li>
+      <li>Moon 4 <button class="btn btn-danger">Delete Moon</button></li>
     </ul>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./moons.js"></script>
 </body>
 </html>
