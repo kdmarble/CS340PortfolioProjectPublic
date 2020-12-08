@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Stars</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">Solar System Simulator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="./systems.html">Solar Systems <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="./stars.html">Stars</a>
+            <a class="nav-item nav-link" href="./planets.html">Planets</a>
+            <a class="nav-item nav-link" href="./moons.html">Moons</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+      <h1>Add a New Star</h1>
+      <form id="addStar">
+        <div class="form-group">
+          <label for="inputName">Name</label>
+          <input required type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter Name">
+        </div>
+    
+        <div class="form-group">
+          <label for="inputColor">Color</label>
+          <input required type="color" class="form-control" id="inputColor" aria-describedby="nameHelp" placeholder="Enter Color">
+        </div>
+    
+        <div class="form-group">
+          <label for="inputClass">Class</label>
+          <input required type="number" class="form-control" id="inputClass" aria-describedby="nameHelp" placeholder="Enter Class Size" min="1" max="3">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+  <div class="container">
+    <h2>"Select", "Delete", and "Update" for Stars table</h2>
+    <ul id="starsList">
+      <li>Star 1 <button id="deleteStar" class="btn btn-danger">Delete Star</button></li>
+      <li>Star 2 <button id="deleteStar" class="btn btn-danger">Delete Star</button></li>
+      <li>Star 3 <button id="deleteStar" class="btn btn-danger">Delete Star</button></li>
+      <li>Star 4 <button id="deleteStar" class="btn btn-danger">Delete Star</button></li>
+    </ul>
+  </div>
+
+  <div class="container">
+  <h1>Update an Existing Star</h1>
+  <form id="updateStar">
+    <div class="form-group">
+      <label for="updatedName">Name</label>
+      <input required type="text" class="form-control" id="updatedName" aria-describedby="nameHelp" placeholder="Choose Existing Star">
+    </div>
+
+    <div class="form-group">
+      <label for="updatedColor">Color</label>
+      <input required type="color" class="form-control" id="updatedColor" aria-describedby="nameHelp" placeholder="Enter Color">
+    </div>
+
+    <div class="form-group">
+      <label for="updatedClass">Class</label>
+      <input required type="number" class="form-control" id="updatedClass" aria-describedby="nameHelp" placeholder="Relative Size" min="1" max="3">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Star</button>
+  </form>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./stars.js"></script>
+</body>
+</html>
